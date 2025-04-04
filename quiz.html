@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz për Lashtësinë e Arkitekturës</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: Arial, sans-serif;
+      background-color: bisque;
+      display: flex;
+      flex-direction: column; 
+      align-items: center;
+      justify-content: flex-start; 
+      height: 100vh;
+      padding: 20px;
+      text-align: center; 
+    }
+
+    h1 {
+      font-size: 2.5em;  
+      margin-bottom: 40px;  
+      color: #333;  
+    }
+
+    .flashcards-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 20px; 
+    }
+
+    .flashcard {
+      width: 200px;
+      height: 300px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.6s, box-shadow 0.6s;
+      position: relative;
+      margin-bottom: 20px;
+      cursor: pointer;
+    }
+
+    
+    .flashcard .flashcard-front,
+    .flashcard .flashcard-back {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.2em;
+      padding: 20px;
+      text-align: center;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      transition: transform 0.6s;
+    }
+
+    .flashcard .flashcard-front {
+      background-color: #4CAF50;
+      color: white;
+      font-weight: bold;
+    }
+
+   
+    .flashcard .flashcard-back {
+      background-color: #f0f0f0;
+      color: #333;
+      transform: rotateY(180deg);
+    }
+
+   
+    .flashcard:hover .flashcard-front {
+      transform: rotateY(180deg);
+    }
+
+    .flashcard:hover .flashcard-back {
+      transform: rotateY(0deg);
+    }
+
+    .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #45a049;
+  }
+  
+
+  </style>
+
+</head>
+<body>
+  <h1>Quiz për Lashtësinë e Arkitekturës</h1>
+  <div class="flashcards-container">
+   
+    <!-- Flashcard 1 -->
+    <div class="flashcard">
+      <div class="flashcard-front">
+        <p>Kur fillojnë ndërtimet e para?</p>
+      </div>
+      <div class="flashcard-back">
+        <p>Ndërtimet e para filluan në periudhën e Neolitikut.</p>
+      </div>
+    </div>
+
+    <!-- Flashcard 2 -->
+    <div class="flashcard">
+      <div class="flashcard-front">
+        <p>Çfarë është Gobekli Tepe?</p>
+      </div>
+      <div class="flashcard-back">
+        <p>Gobekli Tepe është një lokalitet i lashtë që daton 9500-8000 vite para Krishtit dhe konsiderohet si struktura më e vjetër e njohur ndonjëherë.</p>
+      </div>
+    </div>
+
+    <!-- Flashcard 3 -->
+    <div class="flashcard">
+      <div class="flashcard-front">
+        <p>Çfarë është Arkitektura Romake?</p>
+      </div>
+      <div class="flashcard-back">
+        <p>Arkitektura romake ishte shumë e ndikuar nga arkitektura greke, por u avancua për të krijuar struktura si akuedukte, ura dhe amfiteatra.</p>
+      </div>
+    </div>
+
+    <!-- Flashcard 4 -->
+    <div class="flashcard">
+      <div class="flashcard-front">
+        <p>Cilat janë shemujt më të arkitekturës së mesjetës?</p>
+      </div>
+      <div class="flashcard-back">
+        <p>Shembulli më i mirë i arkitekturës së mesjetës që ka mbijetuar deri më sot, janë kështjellat e fortifikatat.</p>
+      </div>
+    </div>
+
+    <!-- Flashcard 5 -->
+    <div class="flashcard">
+      <div class="flashcard-front">
+        <p>Çfarë është arkitektura neolitike?</p>
+      </div>
+      <div class="flashcard-back">
+        <p>Arkitektura neolitike i referohet periudhës kur njerëzit filluan të ndërtojnë shtëpi të qëndrueshme dhe struktura të tjera për mbijetesën e tyre, siç janë strehimet e para dhe tempujt e lashtë.</p>
+      </div>
+    </div>
+
+    <!-- Flashcard 6 -->
+    <div class="flashcard">
+      <div class="flashcard-front">
+        <p>Ku ndodhet Gobekli Tepe dhe pse është i rëndësishëm?</p>
+      </div>
+      <div class="flashcard-back">
+        <p>Gobekli Tepe ndodhet në Turqinë Juglindore dhe është një nga struktura më të vjetra të njohura, që daton 9500-8000 vjet para Krishtit. Ai është i rëndësishëm sepse konsiderohet si një ndërtesë ceremoniale e ndërtuar nga njerëzit para piramidave dhe Stonehenge.</p>
+      </div>
+    </div>
+
+    <!-- Flashcard 7 -->
+    <div class="flashcard">
+      <div class="flashcard-front">
+        <p>Si ndikuan grekët në arkitekturën perëndimore?</p>
+      </div>
+      <div class="flashcard-back">
+        <p>Grekët lanë një trashëgimi të pasur në arkitekturën perëndimore me krijimin e tempujve të famshëm, si Partenoni në Athinë, dhe zhvillimin e stilit të kolonadave dhe simetrisë që ndikuan arkitekturën gjatë periudhës romake dhe më pas.</p>
+      </div>
+    </div>
+
+    <!-- Flashcard 8 -->
+    <div class="flashcard">
+      <div class="flashcard-front">
+        <p>Çfarë është arkitektura romake dhe si është e ndryshme nga ajo greke?</p>
+      </div>
+      <div class="flashcard-back">
+        <p>Arkitektura romake përfshinte përdorimin e teknologjive të reja si betoni dhe harku për ndërtimin e amfiteatrave, akuedukteve dhe urave, ndërsa arkitektura greke ishte më shumë e fokusuar në tempuj dhe godina publike që përdornin shtylla të drejta dhe simetri.</p>
+      </div>
+    </div>
+
+    <!-- Flashcard 9 -->
+    <div class="flashcard">
+      <div class="flashcard-front">
+        <p>Çfarë përfaqësojnë kështjellat dhe fortifikatat në arkitekturën mesjetare?</p>
+      </div>
+      <div class="flashcard-back">
+        <p>Kështjellat dhe fortifikatat ishin ndërtuar për të ofruar mbrojtje dhe siguri gjatë periudhës mesjetare, duke shërbyer gjithashtu për të shprehur pushtetin dhe prestigjin e sundimtarëve.</p>
+      </div>
+    </div>
+
+    <!-- Flashcard 10 -->
+    <div class="flashcard">
+      <div class="flashcard-front">
+        <p>Si ndikuan luftërat dhe kryqëzatat në arkitekturën mesjetare?</p>
+      </div>
+      <div class="flashcard-back">
+        <p>Luftërat dhe kryqëzatat krijuan nevojën për fortifikata dhe kështjella për të mbrojtur qytetet dhe territorët, dhe kjo ndikoi ndjeshëm në arkitekturën mesjetare, duke i dhënë prioritet sigurisë dhe mbrojtjes.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <section class="quiz-button">
+    <div class="container">
+      <a href="index.html" class="btn">Kthehu</a> 
+    </div>
+  </section>
+
+
+</body>
+</html>
